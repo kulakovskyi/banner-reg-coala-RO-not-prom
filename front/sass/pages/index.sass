@@ -21,29 +21,52 @@ body
   height: 100%
   display: flex
 .banner
-  width: 100%
+  width: 50%
   height: 100vh
   height: calc(var(--vh, 1vh) * 100)
   background: $blue
   position: relative
   overflow: hidden
   cursor: default
-  background: $blue url("../img/back.jpg") no-repeat 0 50%/cover
+  background: $blue url("../img/back2.jpg") no-repeat 0 50%/cover
   &__pyramid
     position: absolute
     width: 100%
-    bottom: 94px
-    left: 0
+    bottom: 10px
+    left: -80px
     z-index: 1
+    transform-origin: bottom center
+    transform: scale(1.1)
+    &::before
+      content: ''
+      position: absolute
+      width: 500px
+      height: 1000px
+      background: url('../img/spot.png') no-repeat 0 50%/contain
+      transform: rotate(45deg)
+      top: -617px
+      right: 378px
+      z-index: -1
+    &::after
+      content: ''
+      position: absolute
+      width: 500px
+      height: 1000px
+      background: url('../img/spot.png') no-repeat 0 50%/contain
+      transform: rotate(45deg)
+      top: -354px
+      right: -76px
+      z-index: -1
+
   &__pers
     position: absolute
     bottom: 0
-    left: -159px
-    height: 71vh
+    left: 5px
+    height: 61vh
     width: 52vh
     z-index: 5
   &__info
-    padding: 100px 100px 0 0
+    padding: 90px 75px 0 0
     display: flex
     flex-direction: column
     align-items: flex-end
@@ -51,73 +74,56 @@ body
     z-index: 10
   &__title
     font-family: $font-suisseintl-semb
-    font-size: 116px
-    line-height: 150px
+    font-size: 58px
+    line-height: 90px
     letter-spacing: 0.03em
     text-transform: uppercase
     font-feature-settings: 'pnum' on, 'lnum' on
     text-align: right
     color: #FFFFFF
     margin: 0 0 30px 0
-  &__code
-    display: flex
-    flex-direction: column
-    align-items: flex-end
-    &-copy
+    padding: 2px 30px 0px
+    background: $magenta
+    span
       font-family: $font-wulkan
-      font-size: 66px
-      line-height: 91px
-      padding: 15px 30px 13px
+  &__bonus
+    font-family: $font-suisseintl-semb
+    font-size: 77px
+    line-height: 102px
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    text-align: right
+    color: #E8E8E8
+    span
+      font-family: $font-wulkan
       color: $magenta
-      letter-spacing: 0.02em
-      text-transform: uppercase
-      border: 2px dashed $magenta
-    &-text
-      font-family: $font-suisseintl-semb
-      font-size: 21px
-      line-height: 27px
-      color: $blue
-      background: $magenta
-      padding: 6px 8px 4px
-      margin-top: -2px
-      border-radius: 0px 0px 8px 8px
-      span
-        color: #FFFFFF
-  &__footer
+    &-2
+      margin: 0 0 30px 0
+  &__row
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__item
+    font-family: $font-suisseintl-semb
+    font-size: 31px
+    line-height: 39px
+    color: #E8E8E8
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    text-align: center
+    &:not(:last-child)
+      margin: 0 43px 0 0
+
+  &__people
     position: absolute
     width: 100%
+    height: 83px
     bottom: 0
     left: 0
-    z-index: 15
-    background: $blue
-    padding: 34px 10px 32px
-    &-list
-      display: flex
-      align-items: center
-      justify-content: center
-    &-item
-      display: flex
-      align-items: center
-      margin: 0 40px 0 0
-      &:last-child
-        margin: 0
-      .percent
-        font-family: $font-suisseintl-med
-        font-size: 66px
-        line-height: 36px
-        letter-spacing: 0.04em
-        margin: 0 15px 0 0
-        color: #FFFFFF
-        span
-          display: inline-block
-          font-size: 32px
-          margin: 0 0 0 -15px
-      .info
-        font-family: $font-suisseintl-med
-        font-size: 22px
-        line-height: 26px
-        letter-spacing: 0.02em
-        color: $magenta
+    z-index: 4
+    background: url('../img/people.png') no-repeat 0 50%/cover
 
 
 
